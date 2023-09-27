@@ -1,5 +1,6 @@
 // import important parts of sequelize library
-const { Model, DataTypes } = require('sequelize');
+const { Model, DataTypes } = require('sequelize'); //This is so that we can perform CRUD operations, has access because of the class Model
+
 // import our database connection from config.js
 const sequelize = require('../config/connection');
 
@@ -10,8 +11,21 @@ class Product extends Model {}
 Product.init(
   {
     // define columns
+    product_name: {
+      type: DataTypes.STRING
+    },
+    price: {
+      type: DataTypes.INTEGER
+    },
+    stock: {
+      type: DataTypes.INTEGER
+    },
+    category_id: {
+      type: DataTypes.INTEGER
+    }
   },
   {
+    // Link to database connection
     sequelize,
     timestamps: false,
     freezeTableName: true,
