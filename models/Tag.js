@@ -13,7 +13,14 @@ Tag.init(
     // define columns
     tag_name: {
       type: DataTypes.STRING
-    }
+    },
+    tag_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'productTag',
+        key: 'id',
+      },
+    },
   },
   {
     // Link to database connection

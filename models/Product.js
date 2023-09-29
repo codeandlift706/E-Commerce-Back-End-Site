@@ -22,7 +22,14 @@ Product.init(
     },
     category_id: {
       type: DataTypes.INTEGER
-    }
+    },
+    product_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'productTag',
+        key: 'id',
+      },
+    },
   },
   {
     // Link to database connection
