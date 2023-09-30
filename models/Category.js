@@ -1,5 +1,5 @@
 // import important parts of sequelize library
-const { Model, DataTypes } = require('sequelize'); //This is so that we can perform CRUD operations, has access because of the class Model
+const { Model, DataTypes } = require('sequelize');
 
 // import our database connection from config.js
 const sequelize = require('../config/connection.js');
